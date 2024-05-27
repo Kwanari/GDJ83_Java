@@ -25,27 +25,12 @@ public class Study8 {
 			if(bullet==1) {
 				for (int i=0;i<30;i++) {
 					System.out.print("탕");
-					}
+					}//i for 끝
 			} else {
 				for (int i=0;i<10;i++) {
 					System.out.print("타타탕");
-				}
-			}
-		}
-
-		
-		
-		
-		
-		
-
-		
-		
-		
-		
-		
-		
-		
-		
+				}//i for 끝
+			}//else 끝
+		}//j for 끝
 	}
 }
