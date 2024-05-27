@@ -22,5 +22,7 @@ public class Study5 {
 		System.out.println("이름을 입력하세요.");
 		String name3 = sc.next ();
 		System.out.println(name==name3);
+		
+
 	}
 }
