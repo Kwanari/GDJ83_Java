@@ -11,13 +11,14 @@ public class S2_2 {
 		boolean flag = true;
 
 		// 1. 학생정보 입력 2. 학생정보 출력 3. 프로그램 종료
-		String[] ar = null; // 학생수만큼 배열 생성
+		String[] ar = null;
 		int[] han = null;
 		int[] eng = null;
 		int[] math = null;
 		int[] bun = null;
 		int[] totals = null;
 		double[] avgs = null;
+		int num = 0;
 
 		while (flag) {
 			System.out.println("1.학생정보 입력, 2.학생정보 출력, 3.학생정보 검색, 4.성적순출력 5.프로그램 종료");
@@ -26,7 +27,7 @@ public class S2_2 {
 			switch (select) {
 			case 1:
 				System.out.println("학생수 입력 하세요");
-				int num = sc.nextInt();
+				num = sc.nextInt();
 
 				ar = new String[num];
 				han = new int[num];
@@ -81,35 +82,35 @@ public class S2_2 {
 				}
 				break;
 			case 4:
-				int[] score = new int[ar.length];
+				double[] avgs2 = new double[num];
+				for (int i = 0; i < ar.length; i++) {
+					avgs2[i] = avgs[i];
+				}
 
 				for (int i = 0; i < ar.length - 1; i++) {
-					boolean change = false;
-
-					for (int j = 0; j < ar.length - 1 - i; j++) {
-						if (avgs[j] > avgs[j + 1]) {
-							change = true;
+					for (int j = i + 1; j < ar.length; j++) {
+						if (avgs[i] > avgs[j]) {
 							int temp = (int) avgs[j];
-							avgs[j] = avgs[j + 1];
-							avgs[j + 1] = temp;
+							avgs[j] = avgs[i];
+							avgs[i] = temp;
+						} // if문
+					} // j for문
+				} // i for문
 
-							score[i] = j + 1;
-						}
-					}
-//					if (change == false) {
-//						break;
-				}
-
-				for (int i = 0; i < bun.length; i++) {
-					System.out.println("번호\t이름\t국어\t영어\t수학\t총점\t평균");
-					System.out.print(bun[score[i]] + "\t");
-					System.out.print(ar[score[i]] + "\t");
-					System.out.print(han[score[i]] + "\t");
-					System.out.print(eng[score[i]] + "\t");
-					System.out.print(math[score[i]] + "\t");
-					System.out.print(totals[score[i]] + "\t");
-					System.out.print(avgs[i] + "\n");
-				}
+				for (int i = 0; i < ar.length; i++) {
+					for (int j = 0; j < ar.length; j++) {
+						if (avgs[i] == avgs2[j]) {
+							System.out.println("번호\t이름\t국어\t영어\t수학\t총점\t평균");
+							System.out.print(bun[j] + "\t");
+							System.out.print(ar[j] + "\t");
+							System.out.print(han[j] + "\t");
+							System.out.print(eng[j] + "\t");
+							System.out.print(math[j] + "\t");
+							System.out.print(totals[j] + "\t");
+							System.out.print(avgs[i] + "\n");
+						} // if
+					} // j for
+				} // i for
 				break;
 			default:
 				flag = false;
