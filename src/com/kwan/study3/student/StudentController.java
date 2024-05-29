@@ -9,9 +9,11 @@ public class StudentController {
 
 		Scanner sc = new Scanner(System.in);
 
-		StudentService ss = new StudentService();
+		StudentService service = new StudentService();
 
 		boolean flag = true;
+
+		Student[] students = service.makeStudent();
 
 		while (flag) {
 			System.out.println("1.학생정보입력 2.전체정보출력 3.학생검색 4.종료");
@@ -19,10 +21,14 @@ public class StudentController {
 
 			if (select == 1) {
 				System.out.println("학생정보입력");
-				ss.makeStudent();
+				students = service.makeStudent();
 
 			} else if (select == 2) {
 				System.out.println("전체정보출력");
+				for (int i = 0; i < students.length; i++) {
+					System.out.println(students[i].name);
+				}
+
 			} else if (select == 3) {
 				System.out.println("학생검색");
 			} else if (select == 4) {

@@ -4,9 +4,9 @@ public class StudentMain {
 
 	public static void main(String[] args) {
 
-		StudentController sc = new StudentController();
+		StudentController controller = new StudentController();
 
-		sc.start();
+		controller.start();
 
 	}// main 메소드 끝
 }

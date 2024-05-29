@@ -3,6 +3,13 @@ package com.kwan.study3;
 public class ObjectStudy1 {
 
 	public static void main(String[] args) {
+		StudyReturn sr = new StudyReturn();
+
+		int result = sr.t1();
+		sr.t2();
+
+		System.out.println(result);
+
 //		// 학생 객체 생성
 //		// new 클래스명() - 객체 주소 반환
 //		Student s = new Student(); // s의 데이터타입 Student
