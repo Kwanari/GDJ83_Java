@@ -1,4 +1,4 @@
-package com.kwan.study2;
+package com.jang.study2;
 
 public class S2 {
 

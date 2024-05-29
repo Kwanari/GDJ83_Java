@@ -1,4 +1,4 @@
-package com.kwan.study3.student;
+package com.jang.study3.student;
 
 import java.util.Scanner;
 

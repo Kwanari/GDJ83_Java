@@ -1,4 +1,4 @@
-package com.kwan.study1;
+package com.jang.study1;
 
 public class Study2 {
 	public static void main (String [] args) {

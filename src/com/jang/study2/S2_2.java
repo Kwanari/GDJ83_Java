@@ -1,4 +1,4 @@
-package com.kwan.study2;
+package com.jang.study2;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package com.kwan.study3.ex1;
+package com.jang.study3.ex1;
 
 import java.util.Random;
 
