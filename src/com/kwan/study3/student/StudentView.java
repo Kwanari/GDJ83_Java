@@ -2,11 +2,11 @@ package com.kwan.study3.student;
 
 public class StudentView {
 
-	public void view3(String str) {
+	public void view(String str) {
 		System.out.println(str);
 	}
 
-	public void view2(Student find) {
+	public void view(Student find) {
 		System.out.println("번호\t이름\t국어\t영어\t수학\t총점\t평균");
 		System.out.print(find.num + "\t");
 		System.out.print(find.name + "\t");

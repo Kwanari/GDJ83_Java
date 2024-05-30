@@ -30,16 +30,16 @@ public class StudentController {
 				if (students != null) {
 					view.view(students);
 				} else {
-					view.view3("학생정보 먼저 입력");
+					view.view("학생정보 먼저 입력");
 				}
 
 			} else if (select == 3) {
 				System.out.println("학생검색");
 				Student stu = service.findByNum(students);
 				if (stu != null) {
-					view.view2(stu);
+					view.view(stu);
 				} else {
-					view.view3("검색결과 없음");
+					view.view("검색결과 없음");
 				}
 
 			} else if (select == 4) {
