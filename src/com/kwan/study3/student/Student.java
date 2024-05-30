@@ -18,9 +18,9 @@ public class Student {
 	// )까지 메서드 선언부,헤더
 	// 접근지정자 [그외지정자] 리턴타입 메서드명 ([매개변수들 선언]){메서드 바디,내용}
 
-	public void info() {
-		int num = 10; // 스택영역의 지역변수
-		System.out.println("info 실행");
-	}
+//	public void info() {
+//		int num = 10; // 스택영역의 지역변수
+//		System.out.println("info 실행");
+//	}
 
 }

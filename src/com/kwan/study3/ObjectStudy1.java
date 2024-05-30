@@ -5,10 +5,16 @@ public class ObjectStudy1 {
 	public static void main(String[] args) {
 		StudyReturn sr = new StudyReturn();
 
-		int result = sr.t1();
-		sr.t2();
+//		int result = sr.t1();
+		int sal = 5000000;
+		sr.t4(sal);
 
-		System.out.println(result);
+		Test test = new Test();
+		test.level = 1;
+		Test test2 = sr.t5(test);
+		System.out.println(test.level);
+		System.out.println(test2.level);
+//		System.out.println(result);
 
 //		// 학생 객체 생성
 //		// new 클래스명() - 객체 주소 반환

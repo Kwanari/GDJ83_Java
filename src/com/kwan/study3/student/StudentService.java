@@ -3,10 +3,28 @@ package com.kwan.study3.student;
 import java.util.Scanner;
 
 public class StudentService {
+	Scanner sc = new Scanner(System.in);
+
+	// findByNum 메서드 일치하는 학생의 객체를 리턴
+
+	public Student findByNum(Student[] students) {
+		System.out.println("찾으려는 학생의 번호 입력하세요.");
+
+		int n = sc.nextInt();
+
+		for (int i = 0; i < students.length; i++) {
+			if (students[i].num == n) {
+				n = students[i].num - 1;
+			}
+		}
+
+		Student find = students[n];
+
+		return find;
+	}
 
 	public Student[] makeStudent() {
 
-		Scanner sc = new Scanner(System.in);
 		// 같은 데이터 타입을 묶는것
 		System.out.println("학생의 수를 입력하세요.");
 		int count = sc.nextInt();
@@ -24,13 +42,13 @@ public class StudentService {
 
 			System.out.println(i + 1 + "번째 이름 입력");
 			s.name = sc.next();
-			System.out.println(students[i].name + "의 번호 입력");
-			s.num = sc.nextInt();
-			System.out.println(students[i].name + "의 국어점수 입력");
+//			System.out.println(i + 1 + "의 번호 입력");
+			s.num = i + 1;
+			System.out.println(i + 1 + "의 국어점수 입력");
 			s.kor = sc.nextInt();
-			System.out.println(students[i].name + "의 영어점수 입력");
+			System.out.println(i + 1 + "의 영어점수 입력");
 			s.eng = sc.nextInt();
-			System.out.println(students[i].name + "의 수학점수 입력");
+			System.out.println(i + 1 + "의 수학점수 입력");
 			s.math = sc.nextInt();
 
 			s.total = s.kor + s.eng + s.math;

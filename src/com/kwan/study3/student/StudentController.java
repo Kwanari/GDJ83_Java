@@ -10,10 +10,11 @@ public class StudentController {
 		Scanner sc = new Scanner(System.in);
 
 		StudentService service = new StudentService();
+		StudentView view = new StudentView();
+		Student[] students = null;
+		Student find = null;
 
 		boolean flag = true;
-
-		Student[] students = service.makeStudent();
 
 		while (flag) {
 			System.out.println("1.학생정보입력 2.전체정보출력 3.학생검색 4.종료");
@@ -22,15 +23,15 @@ public class StudentController {
 			if (select == 1) {
 				System.out.println("학생정보입력");
 				students = service.makeStudent();
+				// students 변수에 학생의 정보가 입력된 배열주소 저장
 
 			} else if (select == 2) {
 				System.out.println("전체정보출력");
-				for (int i = 0; i < students.length; i++) {
-					System.out.println(students[i].name);
-				}
-
+				view.view(students);
 			} else if (select == 3) {
 				System.out.println("학생검색");
+				find = service.findByNum(students);
+				view.find(find);
 			} else if (select == 4) {
 				System.out.println("종료");
 				break;

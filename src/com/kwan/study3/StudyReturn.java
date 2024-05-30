@@ -5,6 +5,27 @@ import java.util.Random;
 public class StudyReturn {
 
 	// 접근지정자 [그외지정자] 리턴타입 메서드명 ([매개변수 선언])
+
+	public Test t5(Test t) { // 다수의 매개변수 = 쉼표,로 구분
+		System.out.println(t.level);
+		t.level = 200;
+		t = new Test();
+		t.level = 500;
+		return t;
+	}
+
+	// 매개변수 선언
+	public void t4(int sal) {
+		// 프리랜서 월급 > 3.3% 제외한 실수령액 계산
+		// 실수령액 = 월급 - 월급 * 0.033;
+
+		double result = sal - sal * 0.033;
+		System.out.println(result);
+
+		sal = 100;
+
+	}
+
 	// void 되돌려줄 값이 없다
 	// return 타입 제한없음
 	public int t1() {
