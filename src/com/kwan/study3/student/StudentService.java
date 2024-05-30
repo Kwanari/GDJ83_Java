@@ -11,16 +11,15 @@ public class StudentService {
 		System.out.println("찾으려는 학생의 번호 입력하세요.");
 
 		int n = sc.nextInt();
+		Student stu = null;
 
 		for (int i = 0; i < students.length; i++) {
 			if (students[i].num == n) {
-				n = students[i].num - 1;
+				stu = students[i];
 			}
 		}
 
-		Student find = students[n];
-
-		return find;
+		return stu;
 	}
 
 	public Student[] makeStudent() {
