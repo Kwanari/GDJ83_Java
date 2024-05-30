@@ -13,8 +13,9 @@ public class S1Main {
 		Korea korea;
 
 		Member member = new Member();
+		com.kwan.s3.Member mem = new com.kwan.s3.Member();
 		member.name = "test";
-		member.age = 20;
+//		member.age = 20; // private
 
 //		korea.name = "";
 	}
