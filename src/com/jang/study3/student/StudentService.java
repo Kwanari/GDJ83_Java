@@ -3,6 +3,20 @@ package com.jang.study3.student;
 import java.util.Scanner;
 
 public class StudentService {
+	
+	//findByNum  -> 찾으려고하는 학생의 번호를 받아서 일치하는 학생의 객체를 리턴
+	public Student find(Student[] students) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("번호입력");
+		int count = sc.nextInt();
+		
+		for(int i=0; i<students.length; i++) {
+			if(count == students[i].num) {
+				return students[i];
+			}
+		}
+		return null;
+	}
 
 	public Student[] makeStudent() {
 
@@ -24,13 +38,13 @@ public class StudentService {
 
 			System.out.println(i + 1 + "번째 이름 입력");
 			s.name = sc.next();
-			System.out.println(students[i].name + "의 번호 입력");
+			System.out.println(s.name + "의 번호 입력");
 			s.num = sc.nextInt();
-			System.out.println(students[i].name + "의 국어점수 입력");
+			System.out.println(s.name + "의 국어점수 입력");
 			s.kor = sc.nextInt();
-			System.out.println(students[i].name + "의 영어점수 입력");
+			System.out.println(s.name + "의 영어점수 입력");
 			s.eng = sc.nextInt();
-			System.out.println(students[i].name + "의 수학점수 입력");
+			System.out.println(s.name + "의 수학점수 입력");
 			s.math = sc.nextInt();
 
 			s.total = s.kor + s.eng + s.math;
@@ -46,3 +60,5 @@ public class StudentService {
 	}
 
 }
+
+
