@@ -1,6 +1,6 @@
 package com.kwan.s4;
 
-public class Car {
+public final class Car {
 
 	// 접근지정자 [그외지정자] 데이터타입 변수명
 
@@ -8,7 +8,10 @@ public class Car {
 	public static String company;
 
 	// 멤버변수 선언
-	public int price;
+	public final int PRICE; // final선언했을 때 변수명 대문자로 선언
+	{
+		this.PRICE = 30;
+	}
 
 	// 클래스메서드 선언
 	public static void info() {
@@ -19,9 +22,9 @@ public class Car {
 //		this.info2();
 	}
 
-	public void info2() {
+	public final void info2() {
 		Car.info();
-
+		final int num; // 변수>상수로바뀜
 	}
 
 }
