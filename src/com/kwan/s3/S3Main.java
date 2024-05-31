@@ -28,6 +28,11 @@ public class S3Main {
 //		Tiger ani = (Tiger) dropship[0];
 //		Penguin peng = (Penguin) dropship[1];
 
+		Eagle eagle = new Eagle();
+		AirPlane airplane = new AirPlane();
+
+		Fly fly = eagle; // Fly 타입이기도 하다
+		fly = airplane;
 	}
 
 }

@@ -1,10 +1,8 @@
 package com.kwan.s3;
 
-public class Eagle extends Bird {
+public class Eagle extends Bird implements Fly {// 여러개 인터페이스 구현 가능
 
-	@Override
-	public void fly() {
-		// TODO Auto-generated method stub
+	public void flyAble() {
 
 	}
 
