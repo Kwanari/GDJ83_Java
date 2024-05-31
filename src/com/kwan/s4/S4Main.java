@@ -3,18 +3,30 @@ package com.kwan.s4;
 public class S4Main {
 
 	public static void main(String[] args) {
-		// 클래스 변수
-		// 클래스명.변수명
-		Car.company = "";
+		Tv tv = new Tv();
+		tv.brand = "Samsung";
+		tv.price = 5000000;
+		tv.point = 50;
+		tv.size = 100;
 
-		// 클래스 메서드
-		// 클래스명.메서드명
-		Car.info();
+		Computer com = new Computer();
+		com.brand = "Apple";
+		com.price = 3000000;
+		com.point = 30;
+		com.cpu = "M3";
 
-		System.out.println(Math.E);
-		double a = Math.abs(3.3);
+		Phone phone = new Phone();
+		phone.brand = "LG";
+		phone.price = 1500000;
+		phone.point = 15;
+		phone.color = "gray";
 
-		System.out.println(a);
+		Customer customer = new Customer();
+		customer.money = 10000000;
+		customer.point = 0;
+
+		customer.buy(0, 0);
+
 	}
 
 }
