@@ -20,13 +20,13 @@ public class S3Main {
 		// System.out.println(animal.power);
 		System.out.println(animal.name);
 
-		Animal[] dropship = new Animal[8];
-
-		dropship[0] = tiger;
-		dropship[1] = penguin;
-
-		Tiger ani = (Tiger) dropship[0];
-		Penguin peng = (Penguin) dropship[1];
+//		Animal[] dropship = new Animal[8];
+//
+//		dropship[0] = tiger;
+//		dropship[1] = penguin;
+//
+//		Tiger ani = (Tiger) dropship[0];
+//		Penguin peng = (Penguin) dropship[1];
 
 	}
 

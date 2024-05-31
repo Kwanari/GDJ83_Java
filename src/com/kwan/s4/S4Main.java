@@ -25,7 +25,7 @@ public class S4Main {
 		customer.money = 10000000;
 		customer.point = 0;
 
-		customer.buy(0, 0);
+//		customer.buy();
 
 	}
 
