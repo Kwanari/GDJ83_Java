@@ -13,6 +13,12 @@ public class Eagle extends Bird implements Fly {
 		// TODO Auto-generated method stub
 		
 	}
+
+	@Override
+	public void land() {
+		// TODO Auto-generated method stub
+		
+	}
 	
 
 }
