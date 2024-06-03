@@ -19,8 +19,8 @@ public class StackStudy {
 	public int [] remove(int [] ar) {
 		//맨앞에 요소를 삭제하고,
 		// 삭제된 배열 리턴하자
-		
-		return;
+		int [] a = {1};
+		return a;
 	}
 	
 }
