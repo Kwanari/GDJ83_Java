@@ -1,6 +1,6 @@
 package com.jang.s1;
 
-public class QueStudy {
+public class QueStudy { 
 	
 	public int [] add(int[] ar) {
 		// 매개변수로 값을 받은 데이터 배열의  하나의 임의 데이터를 추가 
