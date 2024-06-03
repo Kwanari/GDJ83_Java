@@ -10,14 +10,39 @@ public class S4Main {
 
 		String result = name.substring(2, 7);
 
-		System.out.println(result);
+//		System.out.println(result);
 
 		System.out.println("파일명 입력하세요. 확장자포함");
 		name = sc.next();
 
-		int a = name.indexOf(".", 0);
+		// 확장자만 분리
+		// jpg, png, gif, jpeg, jiff
 
-		System.out.println(name.substring(a + 1));
+		String[] id2 = { "jpg", "png", "gif", "jpeg", "jiff" };
+
+		int dot = name.indexOf(".");
+		String id = name.substring(dot + 1);
+		boolean flag = false;
+
+		System.out.println(id);
+
+		for (int i = 0; i < 5; i++) {
+			if (id2[i].equals(id)) {
+				flag = true;
+				break;
+			}
+		}
+		if (flag) {
+			System.out.println("이미지 파일입니다.");
+		} else {
+			System.out.println("이미지 파일이 아닙니다.");
+		}
+
+//		if (id.equals("jpg") || id.equals("png") || id.equals("gif") || id.equals("jpeg") || id.equals("jiff")) {
+//			System.out.println("이미지 파일입니다.");
+//		} else {
+//			System.out.println("이미지 파일이 아닙니다.");
+//		}
 	}
 
 }
