@@ -2,9 +2,11 @@ package com.kwan.s1.lang.wrapper;
 
 import java.util.Scanner;
 
-public class wrapper2 {
+public class Wrapper2 {
 
 	public static void main(String[] args) {
+		// 비밀번호 길이 최소 6글자 이상
+		// 대소문자, 숫자 1개이상
 		Scanner sc = new Scanner(System.in);
 
 		boolean flag = true;
@@ -14,6 +16,7 @@ public class wrapper2 {
 			String pw = sc.next();
 			for (int i = 0; i < pw.length(); i++) {
 				flag = Character.isUpperCase(pw.charAt(i));
+				flag = Character.isLowerCase(pw.charAt(i));
 				if (flag) {
 					flag = false;
 					break;
