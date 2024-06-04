@@ -26,6 +26,8 @@ public class Wrapper1 {
 		// auto unboxing
 		num = n1;
 
+		System.out.println(num);
+
 	}
 
 }
