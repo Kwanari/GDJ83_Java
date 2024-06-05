@@ -41,7 +41,13 @@ public class WeatherController {
 				wdto = weatherService.addWeather(wdto);
 			} else if (num == 4) {
 				System.out.println("삭제할 도시명 입력하세요.");
-				wdto = weatherService.removeWeather(sc.next(), wdto);
+
+				if (wdto != null) {
+					wdto = weatherService.removeWeather(sc.next(), wdto);
+
+				} else {
+					System.out.println("다시");
+				}
 			} else {
 				flag = false;
 				System.out.println("종료");

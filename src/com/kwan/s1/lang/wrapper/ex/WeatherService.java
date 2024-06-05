@@ -71,6 +71,8 @@ public class WeatherService {
 
 		WeatherDTO[] wdtoPlus = new WeatherDTO[wdto.length + 1];
 
+		wdtoPlus[wdto.length] = new WeatherDTO();
+
 		for (int i = 0; i < wdto.length; i++) {
 			wdtoPlus[i] = wdto[i];
 		}
@@ -84,8 +86,6 @@ public class WeatherService {
 		System.out.println("습도 입력");
 		wdtoPlus[wdto.length].setHumidity(sc.nextInt());
 
-		wdtoPlus[wdto.length] = new WeatherDTO();
-
 		return wdtoPlus;
 
 	}
@@ -96,20 +96,21 @@ public class WeatherService {
 
 	public WeatherDTO[] removeWeather(String city, WeatherDTO[] wdto) {
 		int num = 0;
-
 		WeatherDTO[] wdtoPlus = new WeatherDTO[wdto.length - 1];
 
 		for (int i = 0; i < wdto.length; i++) {
 			if (city.equals(wdto[i].getCity())) {
 				num = i;
-			}
-		}
 
-		for (int i = 0; i < wdtoPlus.length; i++) {
-			if (num <= i) {
-				wdtoPlus[i] = wdto[i + 1];
+				for (int j = 0; j < wdtoPlus.length; j++) {
+					if (num <= i) {
+						wdtoPlus[j] = wdto[j + 1];
+					} else {
+						wdtoPlus[j] = wdto[j];
+					}
+				}
 			} else {
-				wdtoPlus[i] = wdto[i];
+				break;
 			}
 		}
 
