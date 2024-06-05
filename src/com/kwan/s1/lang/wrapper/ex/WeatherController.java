@@ -18,7 +18,7 @@ public class WeatherController {
 		wdto = weatherService.init();
 	}
 
-	public void start(WeatherDTO[] wdto) {
+	public void start() {
 
 		Scanner sc = new Scanner(System.in);
 
