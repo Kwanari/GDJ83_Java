@@ -37,7 +37,6 @@ public class WeatherController {
 				String city = sc.next();
 				weatherView.view(weatherService.findByCity(city, wdto));
 			} else if (num == 3) {
-
 				wdto = weatherService.addWeather(wdto);
 			} else {
 				flag = false;
