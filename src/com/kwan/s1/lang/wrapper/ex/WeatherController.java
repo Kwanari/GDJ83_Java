@@ -27,7 +27,8 @@ public class WeatherController {
 			System.out.println("1.날씨 전체 정보 출력");
 			System.out.println("2.날씨 정보 검색"); // 도시명검색
 			System.out.println("3.날씨 정보 추가");
-			System.out.println("4.프로 그램 종료");
+			System.out.println("4.날씨 정보 삭제");
+			System.out.println("5.프로 그램 종료");
 			int num = sc.nextInt();
 
 			if (num == 1) {
@@ -38,6 +39,9 @@ public class WeatherController {
 				weatherView.view(weatherService.findByCity(city, wdto));
 			} else if (num == 3) {
 				wdto = weatherService.addWeather(wdto);
+			} else if (num == 4) {
+				System.out.println("삭제할 도시명 입력하세요.");
+				wdto = weatherService.removeWeather(sc.next(), wdto);
 			} else {
 				flag = false;
 				System.out.println("종료");

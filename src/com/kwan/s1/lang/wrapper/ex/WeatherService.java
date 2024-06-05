@@ -90,4 +90,30 @@ public class WeatherService {
 
 	}
 
+	// removeWeather
+	// 기본배열에서 하나 삭제
+	// 도시명 입력받아 그 도시의 날씨정보 삭제
+
+	public WeatherDTO[] removeWeather(String city, WeatherDTO[] wdto) {
+		int num = 0;
+
+		WeatherDTO[] wdtoPlus = new WeatherDTO[wdto.length - 1];
+
+		for (int i = 0; i < wdto.length; i++) {
+			if (city.equals(wdto[i].getCity())) {
+				num = i;
+			}
+		}
+
+		for (int i = 0; i < wdtoPlus.length; i++) {
+			if (num <= i) {
+				wdtoPlus[i] = wdto[i + 1];
+			} else {
+				wdtoPlus[i] = wdto[i];
+			}
+		}
+
+		return wdtoPlus;
+	}
+
 }
