@@ -1,5 +1,7 @@
 package com.kwan.s1.lang.wrapper.ex;
 
+import java.util.Scanner;
+
 public class WeatherService {
 	// Business Layer
 	// DAO (Data Access Object)
@@ -59,6 +61,33 @@ public class WeatherService {
 		}
 
 		return result;
+	}// findbycity 메서드 끝
+
+	// 날씨정보 추가
+	// 도시명,기온,습도,상태 입력받고 기존의 날씨정보에 추가
+
+	public WeatherDTO[] addWeather(WeatherDTO[] wdto) {
+		Scanner sc = new Scanner(System.in);
+
+		WeatherDTO[] wdtoPlus = new WeatherDTO[wdto.length + 1];
+
+		wdtoPlus[wdto.length] = new WeatherDTO();
+
+		for (int i = 0; i < wdto.length; i++) {
+			wdtoPlus[i] = wdto[i];
+		}
+
+		System.out.println("도시명 입력");
+		wdtoPlus[wdto.length].setCity(sc.next());
+		System.out.println("온도 입력");
+		wdtoPlus[wdto.length].setGion(sc.nextDouble());
+		System.out.println("날씨 입력");
+		wdtoPlus[wdto.length].setStatus(sc.next());
+		System.out.println("습도 입력");
+		wdtoPlus[wdto.length].setHumidity(sc.nextInt());
+
+		return wdtoPlus;
+
 	}
 
 }
