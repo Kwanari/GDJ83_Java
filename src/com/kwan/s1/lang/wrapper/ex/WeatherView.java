@@ -14,6 +14,18 @@ public class WeatherView {
 			System.out.println(wdto[i].getStatus());
 			System.out.println("================");
 		}
+	}
+
+	public void view(WeatherDTO result) {
+		if (result != null) {
+			System.out.println(result.getCity());
+			System.out.println(result.getGion());
+			System.out.println(result.getHumidity());
+			System.out.println(result.getStatus());
+		} else {
+			System.out.println("정보없음");
+		}
 
 	}
+
 }

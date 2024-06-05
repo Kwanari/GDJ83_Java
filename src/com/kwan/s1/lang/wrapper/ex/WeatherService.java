@@ -45,4 +45,20 @@ public class WeatherService {
 		return wdto;
 	}
 
+	// 날씨정보 도시명 검색
+	// 날씨정보 리턴하여 view에서 출력
+	// findByCity
+
+	public WeatherDTO findByCity(String city, WeatherDTO[] wdto) {
+		WeatherDTO result = null;
+
+		for (int i = 0; i < wdto.length; i++) {
+			if (city.equals(wdto[i].getCity())) {
+				result = wdto[i];
+			}
+		}
+
+		return result;
+	}
+
 }
