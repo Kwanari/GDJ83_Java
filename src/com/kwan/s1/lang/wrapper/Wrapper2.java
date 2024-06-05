@@ -16,15 +16,18 @@ public class Wrapper2 {
 			String pw = sc.next();
 			for (int i = 0; i < pw.length(); i++) {
 				flag = Character.isUpperCase(pw.charAt(i));
-				flag = Character.isLowerCase(pw.charAt(i));
+//				flag = Character.isLowerCase(pw.charAt(i));
 				if (flag) {
-					flag = false;
 					break;
 				} else {
-					flag = true;
-					System.out.println("다시");
-					break;
+					flag = false;
 				}
+			}
+			if (!flag) {
+				flag = true;
+				System.out.println("다시");
+			} else {
+				flag = false;
 			}
 
 		}

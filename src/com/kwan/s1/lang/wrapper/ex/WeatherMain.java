@@ -5,11 +5,12 @@ public class WeatherMain {
 	public static void main(String[] args) {
 		// DTO (Data Transfer Object
 		// VO (Value Object)
+		WeatherDTO[] wdto = new WeatherService().init();
+//		WeatherView wv = new WeatherView();
+		WeatherController wc = new WeatherController();
 
-		WeatherService ws = new WeatherService();
-
-		ws.init();
+//		wv.view(wdto);
+		wc.start(wdto);
 
 	}
-
 }
