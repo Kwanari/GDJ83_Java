@@ -1,6 +1,8 @@
 package com.kwan.s1.lang.wrapper.ex;
 
+import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.StringTokenizer;
 
 public class WeatherService {
 	// Business Layer
@@ -21,11 +23,34 @@ public class WeatherService {
 		String info = sb.toString(); // StringBuffer타입 참조변수를 String타입으로 변환
 
 		info = info.replace(",", "-");
+		WeatherDTO[] wdto = this.useTokenizer(info);
 
-		WeatherDTO[] wdto = this.getWeathers(info);
+//		WeatherDTO[] wdto = this.getWeathers(info);
 
 		return wdto;
 
+	}
+
+	private WeatherDTO[] useTokenizer(String info) {
+		StringTokenizer st = new StringTokenizer(info, "-");
+		ArrayList<WeatherDTO> arrays = new ArrayList();
+		WeatherDTO[] wdto = new WeatherDTO[4];
+		int i = 0;
+
+		while (st.hasMoreTokens()) {
+
+			WeatherDTO wdtos = new WeatherDTO();
+			wdtos.setCity(st.nextToken().trim());
+			wdtos.setGion(Double.parseDouble(st.nextToken().trim()));
+			wdtos.setStatus(st.nextToken().trim());
+			wdtos.setHumidity(Integer.parseInt(st.nextToken().trim()));
+			arrays.add(wdtos);
+
+			wdto[i] = wdtos;
+			i++;
+		}
+
+		return wdto;
 	}
 
 	private WeatherDTO[] getWeathers(String info) { // 멤버메서드
