@@ -29,9 +29,10 @@ public class ExceptionMain1 {
 
 		Exception1 ex1 = new Exception1();
 		try {
-			ex1.ex1(5);
+			ex1.ex1(0);
 		} catch (ArithmeticException e) {
-			e.printStackTrace();
+//			e.printStackTrace();
+			System.out.println(e.getMessage());
 		} catch (InputMismatchException e) {
 			e.printStackTrace();
 		} catch (Exception e) {
